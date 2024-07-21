@@ -25,10 +25,12 @@ void renderer_init(void){
 	glFrontFace(GL_CW);
 	glEnable(GL_DEPTH_TEST);
 	glDepthFunc(GL_LESS);
+	unsigned int tmp=simulation_add_point(&_simulation_data,-1024.0f,-1024.0f,0.0f,1);
 	unsigned int a=simulation_add_point(&_simulation_data,512.0f,128.0f,0.0f,1);
 	unsigned int b=simulation_add_point(&_simulation_data,768.0f,128.0f,0.0f,0);
 	unsigned int c=simulation_add_point(&_simulation_data,1024.0f,128.0f,0.0f,0);
 	simulation_add_connection(&_simulation_data,a,b,256.0f);
+	simulation_add_connection(&_simulation_data,tmp,tmp,1.0f); // consecutive connections cannot share points
 	simulation_add_connection(&_simulation_data,b,c,256.0f);
 }
 

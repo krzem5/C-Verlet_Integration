@@ -5,12 +5,12 @@
 
 #define SHADER_COUNT 2
 
-#define SHADER_LINE ((shader_id_t)_compiled_programs[0])
-#define SHADER_LINE_vs_transform (_program_uniforms[0])
-#define SHADER_LINE_gs_half_size (_program_uniforms[1])
-#define SHADER_POINT ((shader_id_t)_compiled_programs[1])
-#define SHADER_POINT_vs_transform (_program_uniforms[2])
-#define SHADER_POINT_gs_half_size (_program_uniforms[3])
+#define SHADER_POINT ((shader_id_t)_compiled_programs[0])
+#define SHADER_POINT_vs_transform (_program_uniforms[0])
+#define SHADER_POINT_gs_half_size (_program_uniforms[1])
+#define SHADER_LINE ((shader_id_t)_compiled_programs[1])
+#define SHADER_LINE_vs_transform (_program_uniforms[2])
+#define SHADER_LINE_gs_half_size (_program_uniforms[3])
 
 
 
